@@ -12,7 +12,7 @@ const RequestFullAccess: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const navigate = useNavigate();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => { 
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -23,7 +23,7 @@ const RequestFullAccess: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/send-email', {
+      const response = await fetch('https://excelinsight.onrender.com/send-email', { //Use the live server
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
