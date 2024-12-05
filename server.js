@@ -18,10 +18,10 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
 }));
 
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 app.post('/send-email', (req, res) => {
