@@ -13,7 +13,7 @@ const __dirname = path.dirname(__filename);
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: 'http://localhost:5173', // Allow requests from your frontend
+  origin: ['http://localhost:5173', 'https://excelinsight.onrender.com'], // Allow requests from your frontend and the Live website
   methods: ['GET', 'POST', 'OPTIONS'], // Allow specific HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
 }));
