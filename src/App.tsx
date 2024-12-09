@@ -46,7 +46,7 @@ function App() {
     <div className="min-h-screen bg-gray-100">
       {showTimer && (
         <Timer
-          initialSeconds={10}
+          initialSeconds={600}
           onComplete={() => {
             setShowTimer(false);
             navigate('/request-full-access');
